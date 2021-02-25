@@ -1,10 +1,13 @@
 let lists = document.querySelectorAll("li");
 let form = document.getElementById("form");
 let input = document.getElementById("input");
-let li = document.querySelectorAll("li");
+let ul = document.getElementById("adding");
 form.addEventListener("submit", e => {
+  let li = document.createElement("li");
   e.preventDefault();
   let item = input.value;
+  li.innerHTML = item;
+  ul.appendChild(li);
   console.log(item);
 });
 for (let list of lists) {
